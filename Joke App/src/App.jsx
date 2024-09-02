@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-     <Wrapper theme={isDark}>
+     <Wrapper isDark={isDark}>
       <LightDarkButton action={toggleTheme} light={isDark}/>
       <span>
         <h1>React Joke App</h1>

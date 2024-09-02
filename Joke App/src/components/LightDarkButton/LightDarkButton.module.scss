@@ -1,0 +1,18 @@
+.buttonStyling {
+    width: 20%;
+    border-radius: 5%;
+    border: 0;
+    background: transparent;
+    img {
+        width: 10%;
+        height: 5%;
+
+        &.lightMode {
+            color: #fff;
+            filter: invert(90%);
+        }
+
+        &.darkMode {
+        }
+    }
+}
