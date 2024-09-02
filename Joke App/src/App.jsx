@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 
-import "./App.scss";
-import { JokeButton } from './components/JokeButton/JokeButton';
-import { Joke } from './components/Joke/Joke';
 import { Wrapper } from './components/Wrapper/Wrapper';
 import { JokeSelection } from './components/JokeSelection/JokeSelection';
+import { Joke } from './components/Joke/Joke';
+import { JokeButton } from './components/JokeButton/JokeButton';
+import "./App.scss";
 
 function App() {
   const [jokeData, setJokeData] = useState();
   const [jokeCategory, setJokeCategory] = useState();
-  const [categoryJoke, setCategoryJoke] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const jokeUrl = "https://official-joke-api.appspot.com/random_joke";

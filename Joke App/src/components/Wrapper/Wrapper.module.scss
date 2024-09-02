@@ -5,15 +5,23 @@
     align-items: center;
     gap: 1rem;
     border: 2px solid #000;
+    min-height: 100vh;
 
     span {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         img {
             width: 50%;
+            animation: nuggetSpin 4s infinite linear;
         }
+    }
+
+    select {
+        padding: 0.4rem 1.2rem;
+        border-radius: 12px;
     }
 
     footer {
@@ -26,4 +34,18 @@
         color: #fff;
         border: 2px solid #fff;
     }
+
+    &.light {
+        background: #fff;
+        color: #000;
+        border: 2px solid #1c1c1c;
+    }
+}
+
+@keyframes nuggetSpin {
+    0% {transform: rotateY(0deg);}
+    25% {transform: rotateY(-40deg) rotateY(10deg);}
+    50% {transform: rotateY(0deg);}
+    75% {transform: rotateY(200deg);}
+    100% {transform: rotateY(0deg);}
 }
