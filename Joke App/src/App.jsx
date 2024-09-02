@@ -5,14 +5,21 @@ import { JokeSelection } from './components/JokeSelection/JokeSelection';
 import { Joke } from './components/Joke/Joke';
 import { JokeButton } from './components/JokeButton/JokeButton';
 import "./App.scss";
+import { LightDarkButton } from './components/LightDarkButton/LightDarkButton';
 
 function App() {
+  const [isDark, setIsDark] = useState(false);
+
   const [jokeData, setJokeData] = useState();
   const [jokeCategory, setJokeCategory] = useState();
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const jokeUrl = "https://official-joke-api.appspot.com/random_joke";
   const allCategoriesUrl = "https://official-joke-api.appspot.com/types";
+
+  const toggleTheme = () => {
+    setIsDark((prevState) => !prevState);
+  }
 
   const getJokeData = async () => {
     let res = await fetch(jokeUrl);
@@ -44,7 +51,8 @@ function App() {
 
   return (
     <>
-     <Wrapper theme='dark'>
+     <Wrapper theme={isDark}>
+      <LightDarkButton action={toggleTheme} light={isDark}/>
       <span>
         <h1>React Joke App</h1>
         <img src='./src/assets/brainrot.png' alt='brainrot' />
