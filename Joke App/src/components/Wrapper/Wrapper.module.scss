@@ -1,0 +1,22 @@
+.wrapperStyling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid #000;
+    // width: 400px;
+    // height: auto;
+    // margin-left: 40%;
+    // margin-top: 10%;
+
+    img {
+        width: 50%;
+    }
+
+    &.dark {
+        background: #1c1c1c;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+}
